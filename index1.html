@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salary Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="salary">
+      <div class="salary__heading">
+        <h1>Salary Calculator</h1>
+      </div>
+      <div class="salary__form">
+        <form name="salaryform" onsubmit="return false">
+          <label for="name">Name :</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Employee Name"
+            required
+            class="input-box"
+          />
+          <br />
+          <label for="salary">Salary :</label>
+          <input
+            type="number"
+            id="salary"
+            min="0"
+            placeholder=" Salary"
+            required
+            class="input-box"
+          />
+          <br />
+          <label for="years">Years :</label>
+          <input
+            type="number"
+            id="years"
+            min="0"
+            max="12"
+            value="0"
+            required
+            class="input-box"
+          />
+          <label for="months">Months :</label>
+          <input
+            type="number"
+            id="months"
+            min="0"
+            max="12"
+            value="0"
+            required
+            class="input-box"
+          />
+          <br />
+          <input
+            class="btn"
+            type="submit"
+            value="Calculate"
+            onclick="calculate()"
+          />
+          <p id="results"></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+$primary-color: #1a73e8;
+$input-color: #80868b;
+$border-color: #dadce0;
+$small-font-size: 0.75rem;
+
+/*===== BASE =====*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // To hide scrollbars @animations
+  overflow-x: hidden;
+}
+
+/*===== FORM =====*/
+
+.form {
+  width: 360px;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba($input-color, 0.2);
+
+  &__title {
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
+  &__div {
+    position: relative;
+    height: 48px;
+    margin-bottom: 1.5rem;
+  }
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $border-color;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+  }
+  &__label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 0.25rem;
+    background-color: #fff;
+    color: $input-color;
+    transition: 0.3s;
+  }
+  &__button {
+    display: block;
+    margin-left: auto;
+    padding: 0.75rem 2rem;
+    outline: none;
+    border: none;
+    background-color: $primary-color;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(0.98);
+    }
+  }
+
+  &__results {
+    display: inline-block;
+    font-weight: 500;
+    margin-top: 2rem;
+    color: $input-color;
+  }
+}
+
+// Input focus move up label
+.form__input:focus + .form__label {
+  top: -0.5rem;
+  left: 0.8rem;
+  color: $primary-color;
+  font-size: $small-font-size;
+  font-weight: 500;
+  z-index: 10;
+}
+
+// Input focus sticky top label
+.form__input:not(:placeholder-shown) + .form__label {
+  top: -0.5rem;
+  left: 0.8rem;
+  z-index: 10;
+  font-size: $small-font-size;
+  font-weight: 500;
+}
+
+/*Input focus*/
+.form__input:focus {
+  border: 1.5px solid $primary-color;
+}

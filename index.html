@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title Bar Icon and Title -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
     <title>Salary Calculator</title>
 
+    <!-- Custom CSS and Scripts -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/script.js" defer></script>
   </head>
@@ -29,7 +33,6 @@
           id="salary"
           class="form__input"
           min="0"
-          max="1000000"
           placeholder=" "
           required
         />
@@ -39,23 +42,9 @@
       <div class="form__div">
         <input
           type="number"
-          id="years"
-          class="form__input"
-          min="0"
-          max="55"
-          placeholder=" "
-          required
-        />
-        <label for="" class="form__label">Years</label>
-      </div>
-
-      <div class="form__div">
-        <input
-          type="number"
           id="months"
           class="form__input"
           min="0"
-          max="12"
           placeholder=" "
           required
         />
@@ -68,7 +57,16 @@
         value="Calculate"
         onclick="calculate()"
       />
-      <h3 class="form__results">Total Salary &emsp;:&emsp; &#8377;</h3>
+      <h3 class="form__results">Total Salary drawn &emsp;: &emsp; &#8377;</h3>
     </form>
+
+    <div class="source-code">
+      <a
+        href="https://github.com/vishakhg98/Salary-Calculator"
+        target="_blank"
+        rel="noopener"
+        ><img src="assets/img/favicon.png" alt=""
+      /></a>
+    </div>
   </body>
 </html>

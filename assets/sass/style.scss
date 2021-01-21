@@ -18,8 +18,10 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  // To hide scrollbars @animations
   overflow-x: hidden;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
 }
 
 /*===== FORM =====*/
@@ -29,6 +31,9 @@ body {
   padding: 4rem 2rem;
   border-radius: 1rem;
   box-shadow: 0 10px 25px rgba($input-color, 0.2);
+  @media (max-width: 768px) {
+    padding: 2rem 2rem;
+  }
 
   &__title {
     font-weight: 400;
@@ -108,4 +113,16 @@ body {
 /*Input focus*/
 .form__input:focus {
   border: 1.5px solid $primary-color;
+}
+
+.source-code {
+  align-self: center;
+  margin: 1rem 0 0.1rem;
+  img {
+    display: block;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }

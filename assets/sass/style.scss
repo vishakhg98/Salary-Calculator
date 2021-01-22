@@ -56,6 +56,18 @@ body {
     padding: 1rem;
     background: none;
     z-index: 1;
+    &:focus {
+      border: 1.5px solid $primary-color;
+      // Input focus move up label + to get direct child label
+      + .form__label {
+        top: -0.5rem;
+        left: 0.8rem;
+        color: $primary-color;
+        font-size: $small-font-size;
+        font-weight: 500;
+        z-index: 10;
+      }
+    }
   }
   &__label {
     position: absolute;
@@ -91,17 +103,7 @@ body {
   }
 }
 
-// Input focus move up label
-.form__input:focus + .form__label {
-  top: -0.5rem;
-  left: 0.8rem;
-  color: $primary-color;
-  font-size: $small-font-size;
-  font-weight: 500;
-  z-index: 10;
-}
-
-// Input focus sticky top label
+// Input focus sticky top label if data is inserted to input
 .form__input:not(:placeholder-shown) + .form__label {
   top: -0.5rem;
   left: 0.8rem;
@@ -110,11 +112,7 @@ body {
   font-weight: 500;
 }
 
-/*Input focus*/
-.form__input:focus {
-  border: 1.5px solid $primary-color;
-}
-
+// Github Link
 .source-code {
   align-self: center;
   margin: 1rem 0 0.1rem;

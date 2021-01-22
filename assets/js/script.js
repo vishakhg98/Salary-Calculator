@@ -5,9 +5,9 @@ function calculate() {
 
   totalSalary = empSalary * months;
   // To add commas to salary
-  totalSalary = totalSalary.toLocaleString();
+  totalSalary = "&#8377;" + totalSalary.toLocaleString();
   // &#8377; <- Rupees unicode
   document.querySelector(
     ".form__results"
-  ).innerHTML = `${empName}'s Total Salary &emsp;: &emsp; &#8377;  ${totalSalary}`;
+  ).innerHTML = `${empName}'s Total Salary &emsp;: &emsp; ${totalSalary}`;
 }

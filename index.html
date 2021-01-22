@@ -13,7 +13,12 @@
     <script src="assets/js/script.js" defer></script>
   </head>
   <body>
-    <form action="" class="form" id="form" onsubmit="return false">
+    <form
+      action=""
+      class="form"
+      id="form"
+      onsubmit="calculate(event.preventDefault())"
+    >
       <h1 class="form__title">Total Salary Calculator</h1>
 
       <div class="form__div">
@@ -33,6 +38,7 @@
           id="salary"
           class="form__input"
           min="0"
+          max="10000000"
           placeholder=" "
           required
         />
@@ -44,20 +50,15 @@
           type="number"
           id="months"
           class="form__input"
-          min="0"
+          min="1"
           placeholder=" "
           required
         />
         <label for="" class="form__label">Months</label>
       </div>
 
-      <input
-        type="submit"
-        class="form__button"
-        value="Calculate"
-        onclick="calculate()"
-      />
-      <h3 class="form__results">Total Salary drawn &emsp;: &emsp; &#8377;</h3>
+      <input type="submit" class="form__button" value="Calculate" />
+      <h3 class="form__results">Total Salary &emsp;: &emsp; &#8377;</h3>
     </form>
 
     <div class="source-code">
